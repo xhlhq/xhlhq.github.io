@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>分发脚本 ansible | XHLHQ的个人笔记博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/logo">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="description" content="XHLHQ的个人笔记博客，作为学习记录">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    <link rel="preload" href="/assets/css/0.styles.48090051.css" as="style"><link rel="preload" href="/assets/js/app.cca6c106.js" as="script"><link rel="preload" href="/assets/js/3.5e4edc9a.js" as="script"><link rel="preload" href="/assets/js/117.32d62c34.js" as="script"><link rel="preload" href="/assets/js/5.df884544.js" as="script"><link rel="prefetch" href="/assets/js/10.02d0c314.js"><link rel="prefetch" href="/assets/js/100.979eb2a5.js"><link rel="prefetch" href="/assets/js/101.8eb1d364.js"><link rel="prefetch" href="/assets/js/102.a2cb4070.js"><link rel="prefetch" href="/assets/js/103.79028cf5.js"><link rel="prefetch" href="/assets/js/104.66cb53fa.js"><link rel="prefetch" href="/assets/js/105.5977c56b.js"><link rel="prefetch" href="/assets/js/106.c1c08cd9.js"><link rel="prefetch" href="/assets/js/107.96ba40d8.js"><link rel="prefetch" href="/assets/js/108.62618dac.js"><link rel="prefetch" href="/assets/js/109.5d576569.js"><link rel="prefetch" href="/assets/js/11.32d2d46f.js"><link rel="prefetch" href="/assets/js/110.d79a5bf4.js"><link rel="prefetch" href="/assets/js/111.989c225c.js"><link rel="prefetch" href="/assets/js/112.c5c89471.js"><link rel="prefetch" href="/assets/js/113.7f196453.js"><link rel="prefetch" href="/assets/js/114.7e3c1987.js"><link rel="prefetch" href="/assets/js/115.538d47d7.js"><link rel="prefetch" href="/assets/js/116.c9505874.js"><link rel="prefetch" href="/assets/js/118.cb3475ad.js"><link rel="prefetch" href="/assets/js/119.5e8cea30.js"><link rel="prefetch" href="/assets/js/12.275d9048.js"><link rel="prefetch" href="/assets/js/120.c0c8282b.js"><link rel="prefetch" href="/assets/js/121.e7a57f88.js"><link rel="prefetch" href="/assets/js/122.2f648614.js"><link rel="prefetch" href="/assets/js/123.36d4817d.js"><link rel="prefetch" href="/assets/js/124.2d78037a.js"><link rel="prefetch" href="/assets/js/125.3b559239.js"><link rel="prefetch" href="/assets/js/126.7b518cf3.js"><link rel="prefetch" href="/assets/js/127.d2f856fb.js"><link rel="prefetch" href="/assets/js/128.c69d2a82.js"><link rel="prefetch" href="/assets/js/129.6fbb23f6.js"><link rel="prefetch" href="/assets/js/13.74d3e46f.js"><link rel="prefetch" href="/assets/js/130.bf8b580c.js"><link rel="prefetch" href="/assets/js/131.30e06388.js"><link rel="prefetch" href="/assets/js/132.7ced9b55.js"><link rel="prefetch" href="/assets/js/133.efc22292.js"><link rel="prefetch" href="/assets/js/134.aaffbba1.js"><link rel="prefetch" href="/assets/js/135.9ccaab4e.js"><link rel="prefetch" href="/assets/js/136.024270f8.js"><link rel="prefetch" href="/assets/js/137.32ef1bc2.js"><link rel="prefetch" href="/assets/js/138.19a02716.js"><link rel="prefetch" href="/assets/js/139.388e9c70.js"><link rel="prefetch" href="/assets/js/14.10d2a339.js"><link rel="prefetch" href="/assets/js/140.ca047bf0.js"><link rel="prefetch" href="/assets/js/141.4718452b.js"><link rel="prefetch" href="/assets/js/142.133dc317.js"><link rel="prefetch" href="/assets/js/143.538cbc44.js"><link rel="prefetch" href="/assets/js/144.1729440c.js"><link rel="prefetch" href="/assets/js/145.62d9fd55.js"><link rel="prefetch" href="/assets/js/146.533752f4.js"><link rel="prefetch" href="/assets/js/147.f795cd6c.js"><link rel="prefetch" href="/assets/js/148.69f5f582.js"><link rel="prefetch" href="/assets/js/149.18d76ff1.js"><link rel="prefetch" href="/assets/js/15.bd9d3e29.js"><link rel="prefetch" href="/assets/js/150.c1b61fc8.js"><link rel="prefetch" href="/assets/js/151.2dbdfd3d.js"><link rel="prefetch" href="/assets/js/152.53d30274.js"><link rel="prefetch" href="/assets/js/153.5a56961b.js"><link rel="prefetch" href="/assets/js/154.79f1bcd0.js"><link rel="prefetch" href="/assets/js/155.efd59be7.js"><link rel="prefetch" href="/assets/js/156.f522b9cb.js"><link rel="prefetch" href="/assets/js/157.79d46483.js"><link rel="prefetch" href="/assets/js/158.080a2e8b.js"><link rel="prefetch" href="/assets/js/159.150bb597.js"><link rel="prefetch" href="/assets/js/16.2382422b.js"><link rel="prefetch" href="/assets/js/160.7132aa6e.js"><link rel="prefetch" href="/assets/js/161.a4f4d34d.js"><link rel="prefetch" href="/assets/js/162.ec49d4ed.js"><link rel="prefetch" href="/assets/js/163.1ecdc597.js"><link rel="prefetch" href="/assets/js/164.1e6a9f22.js"><link rel="prefetch" href="/assets/js/165.812b75c0.js"><link rel="prefetch" href="/assets/js/166.b419254f.js"><link rel="prefetch" href="/assets/js/167.f0ef90c7.js"><link rel="prefetch" href="/assets/js/168.5b7dccee.js"><link rel="prefetch" href="/assets/js/169.2c7f21c5.js"><link rel="prefetch" href="/assets/js/17.4272c44d.js"><link rel="prefetch" href="/assets/js/170.d279ddc3.js"><link rel="prefetch" href="/assets/js/171.0754ef20.js"><link rel="prefetch" href="/assets/js/172.5dd7b94b.js"><link rel="prefetch" href="/assets/js/173.f1a23cd8.js"><link rel="prefetch" href="/assets/js/174.47a71887.js"><link rel="prefetch" href="/assets/js/175.0489ee87.js"><link rel="prefetch" href="/assets/js/176.c870597a.js"><link rel="prefetch" href="/assets/js/177.5a14b62b.js"><link rel="prefetch" href="/assets/js/178.78375cc5.js"><link rel="prefetch" href="/assets/js/179.6b94283f.js"><link rel="prefetch" href="/assets/js/18.8f43def2.js"><link rel="prefetch" href="/assets/js/180.d58a416d.js"><link rel="prefetch" href="/assets/js/181.b02530b1.js"><link rel="prefetch" href="/assets/js/182.05aea51e.js"><link rel="prefetch" href="/assets/js/183.81d83df7.js"><link rel="prefetch" href="/assets/js/184.1c6fc3b7.js"><link rel="prefetch" href="/assets/js/185.a1419b90.js"><link rel="prefetch" href="/assets/js/186.e0afd99c.js"><link rel="prefetch" href="/assets/js/187.ebb6d642.js"><link rel="prefetch" href="/assets/js/188.c1784a7c.js"><link rel="prefetch" href="/assets/js/189.1b2ead2d.js"><link rel="prefetch" href="/assets/js/19.2084b205.js"><link rel="prefetch" href="/assets/js/20.d1f3062d.js"><link rel="prefetch" href="/assets/js/21.a4cf429a.js"><link rel="prefetch" href="/assets/js/22.28dbdf74.js"><link rel="prefetch" href="/assets/js/23.0c240072.js"><link rel="prefetch" href="/assets/js/24.66f21f3e.js"><link rel="prefetch" href="/assets/js/25.3aa3abb9.js"><link rel="prefetch" href="/assets/js/26.87c524ad.js"><link rel="prefetch" href="/assets/js/27.95301bd3.js"><link rel="prefetch" href="/assets/js/28.e7f8fbc8.js"><link rel="prefetch" href="/assets/js/29.65006cc2.js"><link rel="prefetch" href="/assets/js/30.a686aecb.js"><link rel="prefetch" href="/assets/js/31.94b61be0.js"><link rel="prefetch" href="/assets/js/32.59bd280d.js"><link rel="prefetch" href="/assets/js/33.25b38c44.js"><link rel="prefetch" href="/assets/js/34.5aa3e146.js"><link rel="prefetch" href="/assets/js/35.62ac85ff.js"><link rel="prefetch" href="/assets/js/36.3a394b9d.js"><link rel="prefetch" href="/assets/js/37.8653ebf5.js"><link rel="prefetch" href="/assets/js/38.cc2bbec1.js"><link rel="prefetch" href="/assets/js/39.5ee8c918.js"><link rel="prefetch" href="/assets/js/4.4319954b.js"><link rel="prefetch" href="/assets/js/40.914057e2.js"><link rel="prefetch" href="/assets/js/41.7a66b570.js"><link rel="prefetch" href="/assets/js/42.a0c42242.js"><link rel="prefetch" href="/assets/js/43.a1b636b2.js"><link rel="prefetch" href="/assets/js/44.4c8f59ef.js"><link rel="prefetch" href="/assets/js/45.4faaddfa.js"><link rel="prefetch" href="/assets/js/46.3112c6c3.js"><link rel="prefetch" href="/assets/js/47.38350725.js"><link rel="prefetch" href="/assets/js/48.39224161.js"><link rel="prefetch" href="/assets/js/49.72465901.js"><link rel="prefetch" href="/assets/js/50.dd08b2ce.js"><link rel="prefetch" href="/assets/js/51.18bc646c.js"><link rel="prefetch" href="/assets/js/52.abe20853.js"><link rel="prefetch" href="/assets/js/53.341679ab.js"><link rel="prefetch" href="/assets/js/54.b6483acd.js"><link rel="prefetch" href="/assets/js/55.b177c2fa.js"><link rel="prefetch" href="/assets/js/56.a20900d0.js"><link rel="prefetch" href="/assets/js/57.7ebdb60b.js"><link rel="prefetch" href="/assets/js/58.50d76cae.js"><link rel="prefetch" href="/assets/js/59.57beebef.js"><link rel="prefetch" href="/assets/js/6.96905f85.js"><link rel="prefetch" href="/assets/js/60.4c18e95e.js"><link rel="prefetch" href="/assets/js/61.cb001b19.js"><link rel="prefetch" href="/assets/js/62.c131e45a.js"><link rel="prefetch" href="/assets/js/63.b257cb42.js"><link rel="prefetch" href="/assets/js/64.89d998fa.js"><link rel="prefetch" href="/assets/js/65.e200df1c.js"><link rel="prefetch" href="/assets/js/66.9ac5d598.js"><link rel="prefetch" href="/assets/js/67.09f9d8b1.js"><link rel="prefetch" href="/assets/js/68.da89ea46.js"><link rel="prefetch" href="/assets/js/69.beb90517.js"><link rel="prefetch" href="/assets/js/7.c2ce84a7.js"><link rel="prefetch" href="/assets/js/70.3caef690.js"><link rel="prefetch" href="/assets/js/71.28935a9a.js"><link rel="prefetch" href="/assets/js/72.c92dc44e.js"><link rel="prefetch" href="/assets/js/73.84005564.js"><link rel="prefetch" href="/assets/js/74.cc94cced.js"><link rel="prefetch" href="/assets/js/75.fa7e5566.js"><link rel="prefetch" href="/assets/js/76.e80f9443.js"><link rel="prefetch" href="/assets/js/77.36fa7b37.js"><link rel="prefetch" href="/assets/js/78.b56b1265.js"><link rel="prefetch" href="/assets/js/79.a417a124.js"><link rel="prefetch" href="/assets/js/8.6c06bc63.js"><link rel="prefetch" href="/assets/js/80.55f3178e.js"><link rel="prefetch" href="/assets/js/81.65161d52.js"><link rel="prefetch" href="/assets/js/82.32cc3463.js"><link rel="prefetch" href="/assets/js/83.1812f8b2.js"><link rel="prefetch" href="/assets/js/84.3e7980c4.js"><link rel="prefetch" href="/assets/js/85.956aa507.js"><link rel="prefetch" href="/assets/js/86.706b2b6e.js"><link rel="prefetch" href="/assets/js/87.e34dd12f.js"><link rel="prefetch" href="/assets/js/88.1afc7984.js"><link rel="prefetch" href="/assets/js/89.98d360fa.js"><link rel="prefetch" href="/assets/js/9.9b573e91.js"><link rel="prefetch" href="/assets/js/90.696a6692.js"><link rel="prefetch" href="/assets/js/91.82530212.js"><link rel="prefetch" href="/assets/js/92.658634db.js"><link rel="prefetch" href="/assets/js/93.4cbdefcf.js"><link rel="prefetch" href="/assets/js/94.3d35a6b6.js"><link rel="prefetch" href="/assets/js/95.8db979e3.js"><link rel="prefetch" href="/assets/js/96.55d3b5ea.js"><link rel="prefetch" href="/assets/js/97.6b7efbfe.js"><link rel="prefetch" href="/assets/js/98.fa47e93b.js"><link rel="prefetch" href="/assets/js/99.2ee40226.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.45915a59.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.48090051.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">XHLHQ的个人笔记博客</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  先导
+</a></div><div class="nav-item"><a href="/computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统" class="dropdown-title"><span class="title">系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link router-link-active">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/os/manjaro/" class="nav-link">
+  Manjaro
+</a></li><li class="dropdown-item"><!----> <a href="/os/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/os/centos/" class="nav-link">
+  CentOS
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/d3js/" class="nav-link">
+  D3
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/utils/" class="nav-link">
+  Utils
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mongodb/" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/github/" class="nav-link">
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/tools/vscode/" class="nav-link">
+  VSCode
+</a></li><li class="dropdown-item"><!----> <a href="/tools/chrome/" class="nav-link">
+  Chrome Developer tools
+</a></li><li class="dropdown-item"><!----> <a href="/tools/bookmark-scripts/" class="nav-link">
+  Bookmark scripts
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/more/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/more/hodgepodge/" class="nav-link">
+  小工具
+</a></li><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress1.x 官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/xhlhq/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  先导
+</a></div><div class="nav-item"><a href="/computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统" class="dropdown-title"><span class="title">系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link router-link-active">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/os/manjaro/" class="nav-link">
+  Manjaro
+</a></li><li class="dropdown-item"><!----> <a href="/os/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/os/centos/" class="nav-link">
+  CentOS
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/d3js/" class="nav-link">
+  D3
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/utils/" class="nav-link">
+  Utils
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-item"><!----> <a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mongodb/" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/backend/docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/github/" class="nav-link">
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/tools/vscode/" class="nav-link">
+  VSCode
+</a></li><li class="dropdown-item"><!----> <a href="/tools/chrome/" class="nav-link">
+  Chrome Developer tools
+</a></li><li class="dropdown-item"><!----> <a href="/tools/bookmark-scripts/" class="nav-link">
+  Bookmark scripts
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/more/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/more/hodgepodge/" class="nav-link">
+  小工具
+</a></li><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress1.x 官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/xhlhq/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>LINUX</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/os/linux/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/os/linux/everything-is-a-file.html" class="sidebar-link">一切皆文件</a></li><li><a href="/os/linux/alias.html" class="sidebar-link">别名 alias</a></li><li><a href="/os/linux/ansible.html" aria-current="page" class="active sidebar-link">分发脚本 ansible</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/os/linux/ansible.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/os/linux/ansible.html#install" class="sidebar-link">install</a></li><li class="sidebar-sub-header"><a href="/os/linux/ansible.html#inventory" class="sidebar-link">inventory</a></li><li class="sidebar-sub-header"><a href="/os/linux/ansible.html#ad-hoc" class="sidebar-link">ad-hoc</a></li><li class="sidebar-sub-header"><a href="/os/linux/ansible.html#playbooks" class="sidebar-link">playbooks</a></li></ul></li><li><a href="/os/linux/archiving-and-compression.html" class="sidebar-link">归档和压缩</a></li><li><a href="/os/linux/command-options.html" class="sidebar-link">命令选项</a></li><li><a href="/os/linux/command-set.html" class="sidebar-link">命令集合</a></li><li><a href="/os/linux/command-shortcut.html" class="sidebar-link">命令行快捷键</a></li><li><a href="/os/linux/crontab.html" class="sidebar-link">解放双手计划</a></li><li><a href="/os/linux/detect-your-server.html" class="sidebar-link">检测服务器通达</a></li><li><a href="/os/linux/directory-structure.html" class="sidebar-link">目录结构</a></li><li><a href="/os/linux/firewalld.html" class="sidebar-link">防火墙 firewalld</a></li><li><a href="/os/linux/gaudy-and-pragmatical-command.html" class="sidebar-link">花里胡哨且实用的命令</a></li><li><a href="/os/linux/generate-ssh-key.html" class="sidebar-link">创建 SSH Key</a></li><li><a href="/os/linux/grep-sed-awk.html" class="sidebar-link">文本三剑客</a></li><li><a href="/os/linux/how-to-enable-the-hard-disk.html" class="sidebar-link">如何启用硬盘</a></li><li><a href="/os/linux/how-to-install-linux-on-virtualbox.html" class="sidebar-link">虚拟机中安装 Linux</a></li><li><a href="/os/linux/io-redirection.html" class="sidebar-link">输入、输出重定向</a></li><li><a href="/os/linux/login-with-rsa-key.html" class="sidebar-link">使用 RSA 登录服务器</a></li><li><a href="/os/linux/raid.html" class="sidebar-link">磁盘阵列</a></li><li><a href="/os/linux/rsync-and-scp.html" class="sidebar-link">远程同步文件</a></li><li><a href="/os/linux/systemd.html" class="sidebar-link">守护系统 systemd</a></li><li><a href="/os/linux/user.html" class="sidebar-link">用户管理</a></li><li><a href="/os/linux/view-text-context.html" class="sidebar-link">查看文本内容</a></li><li><a href="/os/linux/xargs.html" class="sidebar-link">传参 xargs</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>虽然也可以自己写 Shell 实现分发脚本，但由于缺乏运维系统概念，混乱、零碎的写法总是让人难受，一接触到 ansible 就知道很难回去了。</p> <p>Ansible 是一个用来批量管理部署远程主机上服务的工具，它通过 SSH 协议实现管理节点与远程节点之间的通信，所以首先需要完成 <a href="/os/linux/login-with-rsa-key.html#生成-rsa">SSH 配置</a>。</p> <p>需要注意的是 Ansible 需要开启公钥认证，也就是添加到 <code>known_hosts</code> 中，对于大批量的操作可以禁用该行为：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vim</span> /etc/ansible/ansible.cfg
+<span class="token comment"># 修改以下内容</span>
+host_key_checking <span class="token operator">=</span> False <span class="token comment"># 取消注释</span>
+</code></pre></div><h2 id="install"><a href="#install" class="header-anchor">#</a> install</h2> <p>虽然可以很简单的直接使用 <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-release-via-dnf-or-yum" target="_blank" rel="noopener noreferrer">yum 安装<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，但由于 ansible 是一个 python 编写的工具，这样就会导致 ansible 依赖于全局的 python，当全局依赖发生变化的时候可能导致 ansible 出现冲突或潜在的安全问题，所以需要隔离 ansible 与其他应用。</p> <h3 id="_1-关闭限制"><a href="#_1-关闭限制" class="header-anchor">#</a> 1. 关闭限制</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl stop firewalld
+systemctl disable firewalld
+systemctl status firewalld <span class="token comment"># 验证</span>
+
+<span class="token function">vim</span> /etc/sysconfig/selinux
+<span class="token comment"># 修改以下内容</span>
+<span class="token assign-left variable">SELINUX</span><span class="token operator">=</span>disabled
+
+<span class="token function">reboot</span>
+getenforce <span class="token comment"># 验证 Disabled</span>
+</code></pre></div><h3 id="_2-安装-python"><a href="#_2-安装-python" class="header-anchor">#</a> 2. 安装 <a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener noreferrer">python<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tar.xz
+<span class="token function">tar</span> xf Python-3.6.9.tar.xz
+<span class="token builtin class-name">cd</span> Python-3.6.9
+./configure --prefix<span class="token operator">=</span>/usr/local --with-ensurepip<span class="token operator">=</span>install --enable-shared <span class="token assign-left variable">LDFLAGS</span><span class="token operator">=</span><span class="token string">&quot;-Wl,-rpath /usr/local/lib&quot;</span>
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> altinstall
+<span class="token function">which</span> pip3.6
+<span class="token function">ln</span> -s /usr/local/bin/pip3.6 /usr/local/bin/pip <span class="token comment"># 建立软连接</span>
+pip <span class="token function">install</span> virtualenv
+</code></pre></div><h3 id="_3-创建实例"><a href="#_3-创建实例" class="header-anchor">#</a> 3. 创建实例</h3> <p>需要创建一个 ansible 用户，并在该系统用户下创建一个 python3.6 版本的 virtualenv 实例。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">useradd</span> deploy
+<span class="token function">su</span> - deploy
+virtualenv -p /usr/local/bin/python3.6 .py3-a2.8-env <span class="token comment"># 创建实例</span>
+<span class="token builtin class-name">source</span> /home/deploy/.py3-a2.8-env/bin/activate
+pip <span class="token function">install</span> paramiko PyYAML  jinja2 <span class="token comment"># 安装依赖，保持顺序</span>
+</code></pre></div><h3 id="_4-安装-ansible"><a href="#_4-安装-ansible" class="header-anchor">#</a> 4. 安装 ansible</h3> <p><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-release-via-dnf-or-yum" target="_blank" rel="noopener noreferrer">官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>推荐的安装方式，当下载速度极慢时的<a href="/tools/github/download-huge-project-from-github.html">解决方案</a>。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone https://gitee.com/shanyuhai123/ansible.git
+<span class="token function">mv</span> ansible .py3-a2.8-env/
+<span class="token builtin class-name">cd</span> .py3-a2.8-env/ansible
+<span class="token function">git</span> branch -a <span class="token comment"># 查看分支</span>
+<span class="token function">git</span> checkout stable-2.8
+<span class="token builtin class-name">source</span> /home/deploy/.py3-a2.8-env/ansible/hacking/env-setup -q
+ansible --version <span class="token comment"># 验证</span>
+</code></pre></div><h3 id="_5-启用-ansible"><a href="#_5-启用-ansible" class="header-anchor">#</a> 5. 启用 ansible</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">shutdown</span> -r now <span class="token comment"># 重启</span>
+
+<span class="token function">su</span> - deploy
+<span class="token builtin class-name">source</span> .py3-a2.8-env/bin/activate <span class="token comment"># 加载 py3</span>
+<span class="token builtin class-name">source</span> .py3-a2.8-env/ansible/hacking/env-setup -q <span class="token comment"># 加载 ansible</span>
+ansible --version <span class="token comment"># 验证</span>
+</code></pre></div><h2 id="inventory"><a href="#inventory" class="header-anchor">#</a> inventory</h2> <p>Ansible 可同事操作属于一个组的多台主机，组和主机之间的关系通过 <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html" target="_blank" rel="noopener noreferrer">inventory<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 文件配置。默认的文件路径为 <code>/etc/ansible/hosts</code>，除默认文件外，还可以使用多个 inventory 文件，当然也可以从云上拉取配置信息。</p> <h3 id="_1-ini-like"><a href="#_1-ini-like" class="header-anchor">#</a> 1. INI-like</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>mail.example.com
+
+<span class="token punctuation">[</span>t1<span class="token punctuation">]</span>
+<span class="token number">192.168</span>.1.11
+<span class="token number">192.168</span>.1.12
+
+<span class="token punctuation">[</span>web<span class="token punctuation">]</span>
+www<span class="token punctuation">[</span>01:50<span class="token punctuation">]</span>.example.com
+
+<span class="token punctuation">[</span>db<span class="token punctuation">]</span>
+db-<span class="token punctuation">[</span>a:f<span class="token punctuation">]</span>.example.com
+
+<span class="token punctuation">[</span>webservers<span class="token punctuation">]</span>
+foo.example.com
+bar.example.com
+
+<span class="token punctuation">[</span>dbservers<span class="token punctuation">]</span>
+one.example.com
+two.example.com
+three.example.com:5309
+</code></pre></div><h3 id="_2-yaml"><a href="#_2-yaml" class="header-anchor">#</a> 2. YAML</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">all</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+    <span class="token key atrule">mail.example.com</span><span class="token punctuation">:</span>
+  <span class="token key atrule">children</span><span class="token punctuation">:</span>
+    <span class="token key atrule">webservers</span><span class="token punctuation">:</span>
+      <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+        <span class="token key atrule">foo.example.com</span><span class="token punctuation">:</span>
+        <span class="token key atrule">bar.example.com</span><span class="token punctuation">:</span>
+    <span class="token key atrule">dbservers</span><span class="token punctuation">:</span>
+      <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+        <span class="token key atrule">one.example.com</span><span class="token punctuation">:</span>
+        <span class="token key atrule">two.example.com</span><span class="token punctuation">:</span>
+        <span class="token key atrule">three.example.com</span><span class="token punctuation">:</span>
+</code></pre></div><h3 id="_3-inheriting-variable-values"><a href="#_3-inheriting-variable-values" class="header-anchor">#</a> 3. Inheriting variable values</h3> <p>在这种情况下自己书写规则 INI-like 风格更方便一些，但是接手他人的时候更希望看到 YAML 风格，更一目了然。</p> <ul><li><p>INI-like</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>atlanta<span class="token punctuation">]</span>
+host1
+host2
+
+<span class="token punctuation">[</span>raleigh<span class="token punctuation">]</span>
+host2
+host3
+
+<span class="token punctuation">[</span>southeast:children<span class="token punctuation">]</span>
+atlanta
+raleigh
+
+<span class="token punctuation">[</span>southeast:vars<span class="token punctuation">]</span>
+<span class="token assign-left variable">some_server</span><span class="token operator">=</span>foo.southeast.example.com
+<span class="token assign-left variable">halon_system_timeout</span><span class="token operator">=</span><span class="token number">30</span>
+<span class="token assign-left variable">self_destruct_countdown</span><span class="token operator">=</span><span class="token number">60</span>
+<span class="token assign-left variable">escape_pods</span><span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token punctuation">[</span>usa:children<span class="token punctuation">]</span>
+southeast
+northeast
+southwest
+northwest
+</code></pre></div></li> <li><p>YAML</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">all</span><span class="token punctuation">:</span>
+  <span class="token key atrule">children</span><span class="token punctuation">:</span>
+    <span class="token key atrule">usa</span><span class="token punctuation">:</span>
+      <span class="token key atrule">children</span><span class="token punctuation">:</span>
+        <span class="token key atrule">southeast</span><span class="token punctuation">:</span>
+          <span class="token key atrule">children</span><span class="token punctuation">:</span>
+            <span class="token key atrule">atlanta</span><span class="token punctuation">:</span>
+              <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+                <span class="token key atrule">host1</span><span class="token punctuation">:</span>
+                <span class="token key atrule">host2</span><span class="token punctuation">:</span>
+            <span class="token key atrule">raleigh</span><span class="token punctuation">:</span>
+              <span class="token key atrule">hosts</span><span class="token punctuation">:</span>
+                <span class="token key atrule">host2</span><span class="token punctuation">:</span>
+                <span class="token key atrule">host3</span><span class="token punctuation">:</span>
+          <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+            <span class="token key atrule">some_server</span><span class="token punctuation">:</span> foo.southeast.example.com
+            <span class="token key atrule">halon_system_timeout</span><span class="token punctuation">:</span> <span class="token number">30</span>
+            <span class="token key atrule">self_destruct_countdown</span><span class="token punctuation">:</span> <span class="token number">60</span>
+            <span class="token key atrule">escape_pods</span><span class="token punctuation">:</span> <span class="token number">2</span>
+        <span class="token key atrule">northeast</span><span class="token punctuation">:</span>
+        <span class="token key atrule">northwest</span><span class="token punctuation">:</span>
+        <span class="token key atrule">southwest</span><span class="token punctuation">:</span>
+</code></pre></div></li></ul> <h3 id="_4-参数"><a href="#_4-参数" class="header-anchor">#</a> 4. 参数</h3> <table><thead><tr><th style="text-align:center;">参数</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:center;">ansible_connection</td> <td>连接类型到主机。</td></tr> <tr><td style="text-align:center;">ansible_host</td> <td>要连接的主机的名称。</td></tr> <tr><td style="text-align:center;">ansible_port</td> <td>连接端口号。</td></tr> <tr><td style="text-align:center;">ansible_user</td> <td>连接到主机时要使用的用户名。</td></tr> <tr><td style="text-align:center;">ansible_password</td> <td>身份验证的密码。</td></tr> <tr><td style="text-align:center;">ansible_ssh_private_key_file</td> <td>ssh使用的私钥文件。</td></tr> <tr><td style="text-align:center;">ansible_ssh_common_args</td> <td>此设置始终附加到sftp，scp和ssh的默认命令行。</td></tr> <tr><td style="text-align:center;">ansible_sftp_extra_args</td> <td>此设置始终附加到默认的sftp命令行。</td></tr> <tr><td style="text-align:center;">ansible_scp_extra_args</td> <td>此设置始终附加到默认scp命令行。</td></tr> <tr><td style="text-align:center;">ansible_ssh_extra_args</td> <td>此设置始终附加到默认的ssh命令行。</td></tr> <tr><td style="text-align:center;">ansible_ssh_pipelining</td> <td>确定是否使用SSH流水线。</td></tr> <tr><td style="text-align:center;">ansible_ssh_executable</td> <td>此设置将覆盖使用系统ssh的默认行为。</td></tr> <tr><td style="text-align:center;">ansible_shell_type</td> <td>目标系统的shell类型。</td></tr> <tr><td style="text-align:center;">ansible_python_interpreter</td> <td>目标主机python路径。</td></tr></tbody></table> <h2 id="ad-hoc"><a href="#ad-hoc" class="header-anchor">#</a> ad-hoc</h2> <p>ad-hoc 可以帮助完成临时任务，很多时候并不需要 Ansible 的强大力量（playbook）。</p> <p>命令格式：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible <span class="token operator">&lt;</span>pattern_goes_here<span class="token operator">&gt;</span> -m <span class="token operator">&lt;</span>module_name<span class="token operator">&gt;</span> -a <span class="token operator">&lt;</span>arguments<span class="token operator">&gt;</span>
+</code></pre></div><p>仅列出部分示例。</p> <h3 id="_1-command"><a href="#_1-command" class="header-anchor">#</a> 1. <a href="https://docs.ansible.com/ansible/latest/modules/command_module.html" target="_blank" rel="noopener noreferrer">command<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Execute <strong>command</strong>s on targets。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible t1 -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;free -m&quot;</span>
+ansible t1 -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;df -h&quot;</span>
+ansible t1 -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;ls /root&quot;</span>
+ansible t1 -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;cat redhat-release&quot;</span>
+</code></pre></div><h3 id="_2-shell"><a href="#_2-shell" class="header-anchor">#</a> 2. <a href="https://docs.ansible.com/ansible/latest/modules/shell_module.html" target="_blank" rel="noopener noreferrer">shell<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Execute shell commands on targets。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible t1 -m shell -a <span class="token string">&quot;echo hello &gt; /tmp/tmp.txt&quot;</span>
+ansible t1 -m shell -a <span class="token string">&quot;cat /tmp/tmp.txt&quot;</span> <span class="token comment"># 验证</span>
+</code></pre></div><h3 id="_3-copy"><a href="#_3-copy" class="header-anchor">#</a> 3. <a href="https://docs.ansible.com/ansible/latest/modules/copy_module.html" target="_blank" rel="noopener noreferrer">copy<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Copy files to remote locations。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible t1 -m copy -a <span class="token string">&quot;src=/root/shell dest=/tmp&quot;</span>
+ansible t1 -m shell -a <span class="token string">&quot;ls /tmp&quot;</span> <span class="token comment"># 验证</span>
+ansible t1 -m shell -a <span class="token string">&quot;wc -l /tmp/shell&quot;</span> <span class="token comment"># 验证</span>
+</code></pre></div><h3 id="_4-script"><a href="#_4-script" class="header-anchor">#</a> 4. <a href="https://docs.ansible.com/ansible/latest/modules/script_module.html" target="_blank" rel="noopener noreferrer">script<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Runs a local script on a remote node after transferring it。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;echo hello&quot;</span> <span class="token operator">&gt;</span> /tmp/hello.sh
+<span class="token function">cat</span> /tmp/hello.sh <span class="token comment"># 验证</span>
+ansible t1 -m script -a <span class="token string">&quot;/tmp/hello.sh&quot;</span> 
+</code></pre></div><h3 id="_5-file"><a href="#_5-file" class="header-anchor">#</a> 5. <a href="https://docs.ansible.com/ansible/latest/modules/file_module.html" target="_blank" rel="noopener noreferrer">file<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Manage files and file properties。</p> <h3 id="_6-yum"><a href="#_6-yum" class="header-anchor">#</a> 6. <a href="https://docs.ansible.com/ansible/latest/modules/yum_module.html" target="_blank" rel="noopener noreferrer">yum<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Manages packages with the yum package manager。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;free -m&quot;</span> <span class="token comment"># 验证</span>
+
+ansible webservers -m yum -a <span class="token string">&quot;name=nginx state=installed&quot;</span>
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;nginx -v&quot;</span> <span class="token comment"># 验证 nginx version: nginx/1.12.2</span>
+<span class="token comment"># 可以注意到并非是最新版 nginx</span>
+<span class="token comment"># 参照示例 https://docs.shanyuhai.top/os/centos/install-the-latest-version-of-nginx.html</span>
+ansible webservers -m yum -a <span class="token string">&quot;name=yum-utils state=installed&quot;</span>
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;ll /etc/yum.repos.d/nginx.repo&quot;</span> <span class="token comment"># 验证</span>
+<span class="token function">vim</span> /etc/yum.repos.d/nginx.repo
+<span class="token function">cat</span> /etc/yum.repos.d/nginx.repo <span class="token comment"># 验证</span>
+<span class="token comment"># 追加内容参考示例</span>
+ansible webservers -m copy -a <span class="token string">&quot;src=/etc/yum.repos.d/nginx.repo dest=/etc/yum.repos.d/nginx.repo&quot;</span>
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;cat /etc/yum.repos.d/nginx.repo&quot;</span> <span class="token comment"># 验证</span>
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;yum-config-manager --enable nginx-mainline&quot;</span>
+ansible webservers -m yum -a <span class="token string">&quot;name=nginx state=installed&quot;</span> <span class="token comment"># 更新</span>
+<span class="token comment"># installed 测试时未能更新，可能需要 present 参数</span>
+<span class="token comment"># 不推荐使用 yum 卸载</span>
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;nginx -v&quot;</span> <span class="token comment"># 验证 </span>
+</code></pre></div><h3 id="_7-systemd"><a href="#_7-systemd" class="header-anchor">#</a> 7. <a href="https://docs.ansible.com/ansible/latest/modules/systemd_module.html" target="_blank" rel="noopener noreferrer">systemd<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Manage services。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 最好将服务写完整</span>
+ansible t1 -m systemd -a <span class="token string">&quot;name=crond.service  enabled=yes state=started&quot;</span>
+ansible t1 -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;systemctl status crond&quot;</span> <span class="token comment"># 验证</span>
+</code></pre></div><h3 id="_8-cron"><a href="#_8-cron" class="header-anchor">#</a> 8. <a href="https://docs.ansible.com/ansible/latest/modules/cron_module.html" target="_blank" rel="noopener noreferrer">cron<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <p>Manage cron.d and crontab entries。</p> <p>实践：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ansible webservers -m <span class="token function">cron</span> -a <span class="token string">&quot;name='sync time' minute=00 hour=00 job='/usr/sbin/ntpdate time.nist.gov &gt; /dev/null 2&gt;&amp;1'&quot;</span> 
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;crontab -l&quot;</span> <span class="token comment"># 验证</span>
+
+<span class="token comment"># 删除任务</span>
+ansible webservers -m <span class="token function">cron</span> -a <span class="token string">&quot;name='sync time' state=absent&quot;</span> 
+ansible webservers -m <span class="token builtin class-name">command</span> -a <span class="token string">&quot;crontab -l&quot;</span> <span class="token comment"># 验证</span>
+</code></pre></div><h2 id="playbooks"><a href="#playbooks" class="header-anchor">#</a> playbooks</h2> <p>相对于 ad-hoc，playbooks 则强大的多，当然也复杂得多。playbook 由一个或多个 plays 组成，在 play 中，一组机器被映射为定义好的角色，其内容被称为 tasks（任务），在基本层次的应用中，一个任务是一个对 ansible 模块的调用。</p> <p>对于如何良好的实践这些内容，有一些整套的 <a href="https://github.com/ansible/ansible-examples" target="_blank" rel="noopener noreferrer">playbooks<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h3 id="_1-one-play"><a href="#_1-one-play" class="header-anchor">#</a> 1. one play</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> webservers
+  <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+    <span class="token key atrule">http_port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+    <span class="token key atrule">max_clients</span><span class="token punctuation">:</span> <span class="token number">200</span>
+  <span class="token key atrule">remote_user</span><span class="token punctuation">:</span> root
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure apache is at the latest version
+    <span class="token key atrule">yum</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> httpd
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> latest
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> write the apache config file
+    <span class="token key atrule">template</span><span class="token punctuation">:</span>
+      <span class="token key atrule">src</span><span class="token punctuation">:</span> /srv/httpd.j2
+      <span class="token key atrule">dest</span><span class="token punctuation">:</span> /etc/httpd.conf
+    <span class="token key atrule">notify</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> restart apache
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure apache is running
+    <span class="token key atrule">service</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> httpd
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> started
+  <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart apache
+      <span class="token key atrule">service</span><span class="token punctuation">:</span>
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> httpd
+        <span class="token key atrule">state</span><span class="token punctuation">:</span> restarted
+</code></pre></div><h3 id="_2-multiple-plays"><a href="#_2-multiple-plays" class="header-anchor">#</a> 2. multiple plays</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> webservers
+  <span class="token key atrule">remote_user</span><span class="token punctuation">:</span> root
+
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure apache is at the latest version
+    <span class="token key atrule">yum</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> httpd
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> latest
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> write the apache config file
+    <span class="token key atrule">template</span><span class="token punctuation">:</span>
+      <span class="token key atrule">src</span><span class="token punctuation">:</span> /srv/httpd.j2
+      <span class="token key atrule">dest</span><span class="token punctuation">:</span> /etc/httpd.conf
+
+<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> databases
+  <span class="token key atrule">remote_user</span><span class="token punctuation">:</span> root
+
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure postgresql is at the latest version
+    <span class="token key atrule">yum</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> postgresql
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> latest
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ensure that postgresql is started
+    <span class="token key atrule">service</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> postgresql
+      <span class="token key atrule">state</span><span class="token punctuation">:</span> started
+</code></pre></div><h3 id="_3-directory-layout"><a href="#_3-directory-layout" class="header-anchor">#</a> 3. Directory Layout</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code>production                <span class="token comment"># inventory file for production servers</span>
+staging                   <span class="token comment"># inventory file for staging environment</span>
+
+group_vars/
+   group1.yml             <span class="token comment"># here we assign variables to particular groups</span>
+   group2.yml
+host_vars/
+   hostname1.yml          <span class="token comment"># here we assign variables to particular systems</span>
+   hostname2.yml
+
+library/                  <span class="token comment"># if any custom modules, put them here (optional)</span>
+module_utils/             <span class="token comment"># if any custom module_utils to support modules, put them here (optional)</span>
+filter_plugins/           <span class="token comment"># if any custom filter plugins, put them here (optional)</span>
+
+site.yml                  <span class="token comment"># master playbook</span>
+webservers.yml            <span class="token comment"># playbook for webserver tier</span>
+dbservers.yml             <span class="token comment"># playbook for dbserver tier</span>
+
+roles/
+    common/               <span class="token comment"># this hierarchy represents a &quot;role&quot;</span>
+        tasks/            <span class="token comment">#</span>
+            main.yml      <span class="token comment">#  &lt;-- tasks file can include smaller files if warranted</span>
+        handlers/         <span class="token comment">#</span>
+            main.yml      <span class="token comment">#  &lt;-- handlers file</span>
+        templates/        <span class="token comment">#  &lt;-- files for use with the template resource</span>
+            ntp.conf.j2   <span class="token comment">#  &lt;------- templates end in .j2</span>
+        files/            <span class="token comment">#</span>
+            bar.txt       <span class="token comment">#  &lt;-- files for use with the copy resource</span>
+            foo.sh        <span class="token comment">#  &lt;-- script files for use with the script resource</span>
+        vars/             <span class="token comment">#</span>
+            main.yml      <span class="token comment">#  &lt;-- variables associated with this role</span>
+        defaults/         <span class="token comment">#</span>
+            main.yml      <span class="token comment">#  &lt;-- default lower priority variables for this role</span>
+        meta/             <span class="token comment">#</span>
+            main.yml      <span class="token comment">#  &lt;-- role dependencies</span>
+        library/          <span class="token comment"># roles can also include custom modules</span>
+        module_utils/     <span class="token comment"># roles can also include custom module_utils</span>
+        lookup_plugins/   <span class="token comment"># or other types of plugins, like lookup in this case</span>
+
+    webtier/              <span class="token comment"># same kind of structure as &quot;common&quot; was above, done for the webtier role</span>
+    monitoring/           <span class="token comment"># &quot;&quot;</span>
+    fooapp/               <span class="token comment"># &quot;&quot;</span>
+</code></pre></div><p>备用方案：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>inventories/
+   production/
+      hosts               <span class="token comment"># inventory file for production servers</span>
+      group_vars/
+         group1.yml       <span class="token comment"># here we assign variables to particular groups</span>
+         group2.yml
+      host_vars/
+         hostname1.yml    <span class="token comment"># here we assign variables to particular systems</span>
+         hostname2.yml
+
+   staging/
+      hosts               <span class="token comment"># inventory file for staging environment</span>
+      group_vars/
+         group1.yml       <span class="token comment"># here we assign variables to particular groups</span>
+         group2.yml
+      host_vars/
+         stagehost1.yml   <span class="token comment"># here we assign variables to particular systems</span>
+         stagehost2.yml
+
+library/
+module_utils/
+filter_plugins/
+
+site.yml
+webservers.yml
+dbservers.yml
+
+roles/
+    common/
+    webtier/
+    monitoring/
+    fooapp/
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/xhlhq/blog/edit/master/docs/os/linux/ansible.md" target="_blank" rel="noopener noreferrer">编辑文档！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020年9月7日星期一晚上11点06分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/os/linux/alias.html" class="prev">
+        别名 alias
+      </a></span> <span class="next"><a href="/os/linux/archiving-and-compression.html">
+        归档和压缩
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.cca6c106.js" defer></script><script src="/assets/js/3.5e4edc9a.js" defer></script><script src="/assets/js/117.32d62c34.js" defer></script><script src="/assets/js/5.df884544.js" defer></script>
+  </body>
+</html>
